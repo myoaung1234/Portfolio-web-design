@@ -19,10 +19,27 @@
 </head>
 <body>
     <div class="container">
+
+
         <div class="nav">
             <h3>chris.</h3>
-            <img src="images/burger menu.png">
+            <img src="images/burger menu.png" id="openNav" onclick="openNavbar()">
         </div>
+
+        <div class="navbar">
+            
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testmonial">Testimonial</a></li>
+            </ul> 
+
+            <i id="closeNav" onclick="closeNavbar()">X</i> 
+        </div>
+
+
         <div class="nav-text">
             <span>HI! EVERYONE</span>
             <h1>Chris Lee<br>Brand Designer</h1>
@@ -31,7 +48,7 @@
             <a href="#">get in touch</a>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <h1>about</h1>
         <span>who am i</span>
         <div class="inner">
@@ -57,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h1>PORTFOLIO</h1>
         <span>LATEST WORKS</span>
         <div class="image-cart">
@@ -168,7 +185,7 @@
         </div>
         <a href="#">view all blogs</a>
     </div>
-    <div class="testmonial">
+    <div class="testmonial" id="testmonial">
         <div class="col-1">
             <h1>TESTIMONIALS</h1>
             <span class="text">WHAT CLIENTS SAYS</span>
@@ -234,6 +251,24 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+    let openNav = document.getElementById('openNav');
+    let closeNav = document.getElementById('closeNav');
+    let navbar = document.querySelector('.navbar');
+
+    function openNavbar() {
+        navbar.style.width = '300px';
+        closeNav.style.display = 'block';
+    }
+
+    function closeNavbar() {
+        navbar.style.width = '0px';
+        closeNav.style.display = 'none';
+    }
+
+
+
+
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
